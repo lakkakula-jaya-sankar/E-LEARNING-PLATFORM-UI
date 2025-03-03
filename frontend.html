@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Progress</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    
+    <!-- Progress Bar -->
+    <section class="one">
+        <h2>HTML & CSS</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="html-progress">0%</div>
+        </div>
+        <!-- HTML Course Layout -->
+        <div class="java-box">
+                <div>
+                    <a href="https://www.youtube.com/watch?v=kUMe1FH4CHE"></a><img src="./images/html.jpg" alt="" onclick="updateProgress('html', 1)"></a>
+                    <p>Part-1</p>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=kUMe1FH4CHE"></a><img src="./images/html.jpg" alt="" onclick="updateProgress('html', 2)"></a>
+                    <p>Part-2</p>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=kUMe1FH4CHE"></a><img src="./images/html.jpg" alt="" onclick="updateProgress('html', 3)"></a>
+                    <p>Part-3</p>
+                </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Progress Bar -->
+    <section class="one">
+        <h2>JavaScript</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="js-progress">0%</div>
+        </div>
+        <!-- JS Course Layout -->
+        <div class="java-box">
+            <div>
+                <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg"><img src="./images/js.jpg" alt="" onclick="updateProgress('js', 1)"></a>
+                <p>Part-1</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg"><img src="./images/js.jpg" alt="" onclick="updateProgress('js', 2)"></a>
+                <p>Part-2</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg"><img src="./images/js.jpg" alt="" onclick="updateProgress('js', 3)"></a>
+                <p>Part-3</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Progress Bar -->
+    <section class="one">
+        <h2>React</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="react-progress">0%</div>
+        </div>
+        <!-- React Course Layout -->
+        <div class="java-box">
+            <div>
+                <a href="https://www.youtube.com/watch?v=bMknfKXIFA8&t=7s"><img src="./images/react.jpg" alt="" onclick="updateProgress('react', 1)"></a>
+                <p>Part-1</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=bMknfKXIFA8&t=7s"><img src="./images/react.jpg" alt="" onclick="updateProgress('react', 2)"></a>
+                <p>Part-2</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=bMknfKXIFA8&t=7s"><img src="./images/react.jpg" alt="" onclick="updateProgress('react', 3)"></a>
+                <p>Part-3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for internal progress tracking -->
+    <script>
+        function updateProgress(course, part) {
+            let totalParts = 3; // Adjust according to actual number of parts
+            let progressKey = course + "-progress";
+            let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+
+            if (!completedParts.includes(part)) {
+                completedParts.push(part);
+                localStorage.setItem(progressKey, JSON.stringify(completedParts));
+            }
+
+            let progressPercentage = (completedParts.length / totalParts) * 100;
+            document.getElementById(progressKey).style.width = progressPercentage + "%";
+            document.getElementById(progressKey).innerText = Math.round(progressPercentage) + "%";
+        }
+
+        function loadProgress() {
+            ["html", "js", "react"].forEach(course => {
+                let progressKey = course + "-progress";
+                let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+                let totalParts = 3; // Adjust according to actual number of parts
+                let progressPercentage = (completedParts.length / totalParts) * 100;
+                
+                document.getElementById(progressKey).style.width = progressPercentage + "%";
+                document.getElementById(progressKey).innerText = Math.round(progressPercentage) + "%";
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadProgress);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.java-box {
+    padding: 3% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.java-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.java-box p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.java-box a{
+    text-decoration: none;
+    color: black;
+}
+.one {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.one h2 {
+    margin-top: 5%;
+}
+.progress-container {
+    width: 80%;
+    background-color: #ddd;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.5s ease-in-out;
+}

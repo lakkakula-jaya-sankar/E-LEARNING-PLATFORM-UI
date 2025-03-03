@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Progress</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <section class="one">
+
+        <!-- Progress bar -->
+        <h2>Core Python</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="python-progress">0%</div>
+        </div>
+
+        <!-- Python Course Layout-->
+        <div class="java-box">
+            <div>
+                <a href="https://www.youtube.com/watch?v=rfscVS0vtbw"><img src="./images/pyhton.jpg" alt="" onclick="updateProgress('python', 1)"></a>
+                <p>Part-1</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=rfscVS0vtbw"><img src="./images/pyhton.jpg" alt="" onclick="updateProgress('python', 2)"></a>
+                <p>Part-2</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=rfscVS0vtbw"><img src="./images/pyhton.jpg" alt="" onclick="updateProgress('python', 3)"></a>
+                <p>Part-3</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Progress bar -->
+    <section class="one">
+        <h2>SQL</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="sql-progress">0%</div>
+        </div>
+
+        <!-- SQL Course Layout-->
+        <div class="java-box">
+            <div>
+                <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY"><img src="./images/sql.jpg" alt="" onclick="updateProgress('sql', 1)"></a>
+                <p>Part-1</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY"><img src="./images/sql.jpg" alt="" onclick="updateProgress('sql', 2)"></a>
+                <p>Part-2</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY"><img src="./images/sql.jpg" alt="" onclick="updateProgress('sql', 3)"></a>
+                <p>Part-3</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Progress bar -->
+    <section class="one">
+        <h2>React</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="powerbi-progress">0%</div>
+        </div>
+
+        <!-- powerbi Course Layout-->
+        <div class="java-box">
+            <div>
+                <a href="https://www.youtube.com/watch?v=PSNXoAs2FtQ"><img src="./images/powerbi.jpg" alt="" onclick="updateProgress('powerbi', 1)"></a>
+                <p>Part-1</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=PSNXoAs2FtQ"><img src="./images/powerbi.jpg" alt="" onclick="updateProgress('powerbi', 2)"></a>
+                <p>Part-2</p>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=PSNXoAs2FtQ"><img src="./images/powerbi.jpg" alt="" onclick="updateProgress('powerbi', 3)"></a>
+                <p>Part-3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for internal progress tracking -->
+    <script>
+        function updateProgress(course, part) {
+            let totalParts = 3; // Adjust according to actual number of parts
+            let progressKey = course + "-progress";
+            let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+
+            if (!completedParts.includes(part)) {
+                completedParts.push(part);
+                localStorage.setItem(progressKey, JSON.stringify(completedParts));
+            }
+
+            let progressPercentage = (completedParts.length / totalParts) * 100;
+            document.getElementById(progressKey).style.width = progressPercentage + "%";
+            document.getElementById(progressKey).innerText = Math.round(progressPercentage) + "%";
+        }
+
+        function loadProgress() {
+            ["python", "sql", "powerbi"].forEach(course => {
+                let progressKey = course + "-progress";
+                let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+                let totalParts = 3; // Adjust according to actual number of parts
+                let progressPercentage = (completedParts.length / totalParts) * 100;
+                
+                document.getElementById(progressKey).style.width = progressPercentage + "%";
+                document.getElementById(progressKey).innerText = Math.round(progressPercentage) + "%";
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadProgress);
+    </script>
+</body>
+</html>

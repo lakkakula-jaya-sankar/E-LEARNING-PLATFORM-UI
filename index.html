@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iWay</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+
+        <!-- Script for responsive Nav Bar -->
+        <script>
+            function toggle(){
+                var m = document.getElementById("liad");
+                m.classList.toggle("nav-list-toggle");
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <!-- Nav Bar -->
+        <nav class="nav-list-vert">
+            <div>Study Bug</div>
+            <div> <svg class="icon img-reim icon-mag" onclick="toggle()"><use xlink:href="./images/sprite.svg#menu"></use></svg> </div>
+            <div class="disp-list list-mag" id="liad"><ul class="list-no-pad">
+                <li><a href="#">Start</a></li>
+                <li><a href="#cou">Courses</a></li>
+                <li><a href="#fea">Features</a></li>
+                <li><a href="#cu">Contact</a></li>
+            </ul></div>
+        </nav>
+
+        <!-- Main Section -->
+        <main class="main-section">
+            <div class="main-matter"> 
+                <h1>Discover. Learn. Grow.</h1>
+                <p>Access high-quality courses for free and enhance your skills.</p>
+                <button class="btn-normal">Start Learning</button>
+            </div>
+            <div class="main-picture"> <img src="./images/banner.png" alt=""> </div>
+        </main>
+
+        <!-- Guidance Section -->
+        <section class="mobile-section" id="cou">
+            <div class="enter-mobile">
+                <h2>Learn Anytime, Anywhere for Free</h2>
+                <p>Select the course you want....</p>
+        </section>
+
+        <!-- start of template -->
+        
+        <section class="templates">
+            <a href="./frontend.html">
+                <div class="one-template">
+                    <div class="temp-head">
+                        <h3>Front-End</h3> <br>
+                        Become a Professional Web designer
+                    </div>
+                    <div class="temp-body">
+                        <ul class="list-vert">
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                            <li>ReactJS</li>
+                        </ul>
+                        <div class="progress-container">
+                            <progress id="frontend-progress" value="0" max="100"></progress>
+                            <span id="frontend-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="./middleware.html">
+                <div class="one-template">
+                    <div class="temp-head">
+                        <img src="./images/popular.svg" alt="">
+                        <h3>Middle-Ware</h3> <br>
+                        Become a Professional Data Analyst
+                    </div>
+                    <div class="temp-body">
+                        <ul class="list-vert">
+                            <li>Core Python</li>
+                            <li>SQL & Excel</li>
+                            <li>Power BI & More..</li>
+                        </ul>
+                        <div class="progress-container">
+                            <progress id="middleware-progress" value="0" max="100"></progress>
+                            <span id="middleware-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                
+            <a href="./backend.html">
+                <div class="one-template">
+                    <div class="temp-head">
+                        <h3>Back-End</h3> <br>
+                        Become a Professional Developer
+                    </div>
+                    <div class="temp-body">
+                        <ul class="list-vert">
+                            <li>Core Java</li>
+                            <li>DSA & System Design</li>
+                            <li>Spring</li>
+                        </ul>
+                        <div class="progress-container">
+                            <progress id="backend-progress" value="0" max="100"></progress>
+                            <span id="backend-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </section>  
+        
+
+
+        <section class="gallery" id="fea">
+            <h2>Go with Study Bug to Conquer World..</h2>
+            <p>The Main Features of Study Bug Includes....</p>
+            <div class="gallery-border">
+
+
+                <div class="gallery-matter">
+                    <span class="gallery-icon-bg">
+                        <svg class="icon img-reim">
+                        <use xlink:href="./images/sprite.svg#growth"></use>
+                        </svg>
+                    </span>
+                    <h3 class="gallery-headings-inside">Progress Tracking</h3>
+                    <p> Study Bug enhance user experience By providing clear visual cues, users know exactly how much progress they have made and what steps are left.</p>
+                    <a href="" class="arrow-text">Learn More</a>
+                </div>
+                <div><img src="./images/easy.jpg" alt=""></div>
+
+
+                <div><img src="./images/fast.jpg" alt=""></div>
+                <div class="gallery-matter">
+                    <span class="gallery-icon-bg">
+                        <svg class="icon img-reim">
+                        <use xlink:href="./images/sprite.svg#computer"></use>
+                        </svg>
+                    </span>
+                    <h3 class="gallery-headings-inside">Well Maintained Content</h3>
+                    <p>Well-maintained content ensures that users can easily find the information they need, leading to a positive experience & Accurate and up-to-date content builds trust with your audience and establishes your website as a reliable source of information.</p>
+                    <a href="" class="arrow-text">Learn More</a>
+                </div>
+
+                <div class="gallery-matter">
+                    <span class="gallery-icon-bg">
+                        <svg class="icon img-reim">
+                        <use xlink:href="./images/sprite.svg#wordpress"></use>
+                        </svg>
+                    </span>
+                    <h3 class="gallery-headings-inside">High-Quality Content</h3>
+                    <p>Well-crafted content captures the reader's attention and encourages them to spend more time on your website.</p>
+                    <a href="" class="arrow-text">Learn More</a>
+                </div> 
+                <div><img src="./images/wordpress.jpg" alt=""></div>
+
+
+                <div><img src="./images/support.jpg" alt=""></div>
+                <div class="gallery-matter">
+                    <span class="gallery-icon-bg">
+                        <svg class="icon img-reim">
+                        <use xlink:href="./images/sprite.svg#clock"></use>
+                        </svg>
+                    </span>
+                    <h3 class="gallery-headings-inside">24/7 Access to content</h3>
+                    <p>Users can access content whenever they need it, without being restricted by time zones or business hours.</p>
+                    <a href="" class="arrow-text">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonal">
+            <h2>What Our Followers are Saying</h2>
+            <p>Explore Testimonals of pepole who are a member of Study Bug</p>
+            <div class="testimonal-outline">
+                <div class="testimonal-image"><div class="qu">
+                    <svg class="icon icon-red-qu">
+                        <use xlink:href="./images/sprite.svg#quotes"></use>
+                    </svg>
+                </div><img src="./images/portfolio.jpg" alt="hello"></div>
+                <div class="testimonal-matter"><p><i>I never thought I could access such high-quality courses at no cost. The lessons are well-organized, and the practical projects helped me gain real-world skills. This platform has truly transformed my learning journey!</i></p>
+                <svg class="icon icon-line"><use xlink:href="./images/sprite.svg#line"></use></svg> <span>John Smith</span> <br> <div class="testimonal-it">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>abc company</i></div>
+            </div>
+        </div>
+        </section>
+
+        <footer class="foot" id="cu">
+            <div>
+                <h2>Study Bug</h2>
+                <p>copyright 2025 iWay</p>
+            </div>
+            <div>
+                <h3>COURSES</h3>
+                <ul class="list-no-pad">
+                    <li>Front-End</li>
+                    <li>Middle Ware</li>
+                    <li>Back-End</li>
+                </ul>
+            </div>
+            <div><h3>COMPANY</h3>
+                <ul class="list-no-pad">
+                    <li>About</li>
+                    <li>Afilliates</li>
+                    <li>Blog</li>
+                </ul></div>
+            <div><h3>SUPPORT</h3>
+                <ul class="list-no-pad">
+                    <li>Contact</li>
+                    <li>Knowledge Base</li>
+                    <li>FAQ</li>
+                </ul></div>
+        </footer>
+
+        <!-- Script For Progress Tracking -->
+        <script>
+            
+            function updateFrontendProgress() {
+            let totalParts = 9; // Total lessons across HTML, JS, React
+            let completedTotal = 0;
+
+            ["html", "js", "react"].forEach(course => {
+                let progressKey = course + "-progress";
+                let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+                completedTotal += completedParts.length;
+            });
+
+            let overallProgress = (completedTotal / totalParts) * 100;
+            document.getElementById("frontend-progress").value = overallProgress;
+            document.getElementById("frontend-progress-text").innerText = Math.round(overallProgress) + "%";
+            }
+            document.addEventListener("DOMContentLoaded", updateFrontendProgress);
+
+            function updateMiddlewareProgress() {
+            let totalParts = 9; // Total lessons across Python, SQL, PowerBI
+            let completedTotal = 0;
+
+            ["python", "sql", "powerbi"].forEach(course => {
+                let progressKey = course + "-progress";
+                let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+                completedTotal += completedParts.length;
+            });
+
+            let overallProgress = (completedTotal / totalParts) * 100;
+            document.getElementById("middleware-progress").value = overallProgress;
+            document.getElementById("middleware-progress-text").innerText = Math.round(overallProgress) + "%";
+            }
+            document.addEventListener("DOMContentLoaded", updateMiddlewareProgress);
+
+            function updateBackendProgress() {
+            let totalParts = 9; // Total lessons across Java, DSA, Spring
+            let completedTotal = 0;
+
+            ["java", "dsa", "spring"].forEach(course => {
+                let progressKey = course + "-progress";
+                let completedParts = JSON.parse(localStorage.getItem(progressKey)) || [];
+                completedTotal += completedParts.length;
+            });
+
+            let overallProgress = (completedTotal / totalParts) * 100;
+            document.getElementById("backend-progress").value = overallProgress;
+            document.getElementById("backend-progress-text").innerText = Math.round(overallProgress) + "%";
+            }
+            document.addEventListener("DOMContentLoaded", updateBackendProgress);
+        </script>
+        
+    </body>
+</html> 

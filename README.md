@@ -60,3 +60,6 @@ The Front-End Course Progress Tracker provides an interactive and persistent lea
 
 ##OUTPUT
 
+![Image](https://github.com/user-attachments/assets/941d5f88-7cbe-4a73-a4ab-55bb7468c77f)
+
+![Image](https://github.com/user-attachments/assets/eb3b08e7-6840-49be-8c46-113f1522badb)
